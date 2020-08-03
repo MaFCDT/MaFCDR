@@ -849,7 +849,8 @@ class Economy {
 		if ($settlement->hasBuildingNamed('Wood Towers')) {
 			$security += 0.05;
 		}
-
+		
+		/* The following can't affect the result since 0.2 + 0.12 from buildings + 0.05 from population is always less than 1.0
 		if ($security < 0.2) {
 			// if you are insecure, then some fake security works, too:
 			if ($settlement->hasBuildingNamed('Shrine')) {
@@ -862,7 +863,8 @@ class Economy {
 				$security += 0.05;
 			}
 		}
-
+		*/
+		
 		// finally, there's security in numbers - wild animals will avoid large settlements
 		if ($pop > 4000) {
 			$security += 0.05;
